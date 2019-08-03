@@ -588,7 +588,8 @@ glPopMatrix();
      glColor3f(0.011, 0.878, 0);
     glBegin(GL_POLYGON);
         glVertex2f(-10.0, -20.0);
-        glVertex2f(-30.0, -33.0);
+      //  glVertex2f(-30.0, -33.0);
+
         glVertex2f(-45.0, -35.0);
         glVertex2f(-20.0,-42.0);
 
@@ -613,6 +614,68 @@ glColor3f(0.086, 0.270, 0.105);
         glVertex2f(43.0, -30.5);
 
   glEnd();
+
+
+///leafshakha////////////////////////////////////
+  glColor3f(0.086, 0.270, 0.105);
+  glLineWidth(2.0);
+  glBegin(GL_LINES);
+    glVertex2f(-10.0, -20.0);
+    glVertex2f(0.0, -32.5);
+
+    glVertex2f(0.0, -32.5);
+    glVertex2f(-20.0, -42);
+
+
+    glVertex2f(5.5, -20.0);
+    glVertex2f(12.0, -32.0);
+
+       glVertex2f(0.0, -44.0);
+    glVertex2f(12.0, -32.0);
+
+
+      glVertex2f(20.0, -40.0);
+    glVertex2f(30.0, -30.5);
+
+          glVertex2f(20.0, -20.0);
+    glVertex2f(30.0, -30.5);
+
+   glEnd();
+   /////////////////////////////////////////////////////////////////////////
+
+
+   /////////////////////////Grasshopper//////////////////////
+
+
+   ///head
+glColor3f(1.0, 1.0, 0.0);
+    glBegin(GL_POLYGON);
+glVertex2f(-8.0, -17.0);
+         glVertex2f(-4.5, -17.0);
+         glVertex2f(-5.0, -20.0);
+glVertex2f(-8.0, -22.0);
+        glVertex2f(-6.0, -22.0);
+glEnd();
+
+///antena
+
+glColor3f(1.0, 1.0, 0.0);
+glLineWidth(2);
+    glBegin(GL_LINES);
+glVertex2f(-13.0, -8.0);
+         glVertex2f(-7.0, -17.0);
+
+         glVertex2f(-2.0, -8.0);
+glVertex2f(-7.0, -17.0);
+        glVertex2f(-6.0, -22.0);
+glEnd();
+
+///eye
+glColor3f(0.0, 0.0, 0.0);
+glPointSize(7.0);
+glBegin(GL_POINTS);
+glVertex2f(-7.0,-18.5);
+glEnd();
 
 
 
