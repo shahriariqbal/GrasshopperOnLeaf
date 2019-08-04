@@ -573,8 +573,8 @@ glPopMatrix();
     glBegin(GL_POLYGON);
 
 
-        glVertex2f(-50.0, -7.0);
-        glVertex2f(50.0, -7.0);
+        glVertex2f(-50.0, -12.0);
+        glVertex2f(50.0, -2.0);
 
          glVertex2f(50.0, -49.0);
 
@@ -677,10 +677,160 @@ glBegin(GL_POINTS);
 glVertex2f(-7.0,-18.5);
 glEnd();
 
+///upperbody
+
+glColor3f(1.0, .37, 0.0);
+
+    glBegin(GL_POLYGON);
+glVertex2f(0.0, -16.5);
+         glVertex2f(0.0, -22.0);
+
+         glVertex2f(-5.0, -16.5);
+glVertex2f(-4.0, -22.0);
+glVertex2f(-2.0, -22.0);
+glEnd();
+
+///upperLegs
+
+glColor3f(1.0, 1.0, 0.0);
+glLineWidth(2);
+    glBegin(GL_LINES);
+glVertex2f(-1.0, -20.0);
+         //glVertex2f(-3.0, -22.0);
+
+         //glVertex2f(-6.0, -26.0);
+glVertex2f(-2.0, -28.0);
+       // glVertex2f(-1.0, -31.0);
+      //  glVertex2f(3.0, -28.0);
+glEnd();
+
+
+glColor3f(1.0, 1.0, 0.0);
+glLineWidth(2);
+    glBegin(GL_LINES);
+
+         glVertex2f(-3.0, -22.0);
+
+         glVertex2f(-6.0, -26.0);
+
+       // glVertex2f(-1.0, -31.0);
+      //  glVertex2f(3.0, -28.0);
+glEnd();
+
+glColor3f(1.0, 1.0, 0.0);
+glLineWidth(2);
+    glBegin(GL_LINES);
+
+
+         glVertex2f(-6.0, -26.0);
+
+        glVertex2f(-1.0, -31.0);
+
+glEnd();
+
+glColor3f(1.0, 1.0, 0.0);
+glLineWidth(2);
+    glBegin(GL_LINES);
+
+glVertex2f(-2.0, -28.0);
+
+    glVertex2f(3.0, -30.0);
+glEnd();
 
 
 
+///mainleg1/////
 
+glColor3f(0.0, 0.0, 0.0);
+glLineWidth(12);
+    glBegin(GL_LINES);
+
+glVertex2f(6.0, -15.0);
+
+    glVertex2f(10.0, -11.0);
+glEnd();
+
+glColor3f(0.0, 0.0, 0.0);
+glLineWidth(8);
+    glBegin(GL_LINES);
+
+glVertex2f(16.0, -30.0);
+
+    glVertex2f(10.0, -11.0);
+glEnd();
+
+
+
+///mainbody_lower
+glColor3f(1.0, .85, 0.23);
+
+    glBegin(GL_POLYGON);
+
+glVertex2f(0.0, -23.0);
+
+    glVertex2f(0.0, -17.0);
+
+    glVertex2f(24.0, -23.0);
+
+    glVertex2f(24.0, -21.0);
+
+        glVertex2f(15.0, -15.0);
+        glVertex2f(24.0, -15.0);
+           glVertex2f(5.0, -15.0);
+
+glEnd();
+
+///mainbody_upper
+
+glColor3f(0.0, 1.0, 0.0);
+
+    glBegin(GL_POLYGON);
+
+glVertex2f(0.0, -15.0);
+
+    glVertex2f(0.0, -17.0);
+
+    glVertex2f(24.0, -15.0);
+
+    glVertex2f(24.0, -21.0);
+glEnd();
+
+///mainbody_tail
+
+glColor3f(.435, .681, .238);
+
+    glBegin(GL_POLYGON);
+
+glVertex2f(30.0, -11.0);
+
+    glVertex2f(30.0, -23.0);
+
+    glVertex2f(24.0, -15.0);
+
+    glVertex2f(24.0, -23.0);
+    //glVertex2f(27.0, -23.0);
+    glVertex2f(30.0, -23.0);
+glEnd();
+
+///mainbody_leg2
+
+glColor3f(0.0, 0.0, 0.0);
+glLineWidth(12);
+    glBegin(GL_LINES);
+
+glVertex2f(10.0, -18.0);
+
+    glVertex2f(16.0, -12.0);
+glEnd();
+
+glColor3f(0.0, 0.0, 0.0);
+glLineWidth(8);
+    glBegin(GL_LINES);
+
+ glVertex2f(16.0, -12.0);
+
+    glVertex2f(23.0, -32.0);
+glEnd();
 
 
 
@@ -790,7 +940,7 @@ int main()
     printf(">><< Press N for nightmood>><< Press D for day mood >><<\n\n");
     printf("Click Mouse Left/Right Button for cloud movement\n\n");
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
-    glutInitWindowSize (690, 690);
+    glutInitWindowSize (1200, 900);
     glutInitWindowPosition (0, 0);
     glutCreateWindow ("shahriar ");
     init();
