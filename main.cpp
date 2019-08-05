@@ -38,81 +38,80 @@ void circle(GLdouble rad)
 
 
 
-
+///-----------------------------------Cloud-------------------------------------///
 void cloudB()
 
 {
-    //left
+    ///left
 
     glPushMatrix();
     glTranslatef(4,5.5,0);
     circle(4);
     glPopMatrix();
 
-    //right
+    ///right
 
     glPushMatrix();
     glTranslatef(-8,5.5,0);
     circle(3.5);
     glPopMatrix();
 
-    //top left
+    ///top left
 
     glPushMatrix();
     glTranslatef(-3.5,9,0);
     circle(3.5);
     glPopMatrix();
 
-    //top right
+    ///top right
 
     glPushMatrix();
     glTranslatef(1,9,0);
     circle(3);
     glPopMatrix();
 
-    //middle
+   ///middle
 
     glPushMatrix();
-
-    //glColor3f (1, 1 ,1);
     glTranslatef(-1.5,5.5,0);
     circle(4);
     glPopMatrix();
 
 }
 
-void a()                                        //mini Cloud
+///.....mini Cloud.....///
+void a()
 
 {
-    //left
+    ///left
 
     glPushMatrix();
     glTranslatef(4,5.5,0);
     circle(4);
     glPopMatrix();
 
-    //right
+    ///right
 
     glPushMatrix();
     glTranslatef(-8,5.5,0);
     circle(3.5);
     glPopMatrix();
 
-    //top left
+    ///top left
 
     glPushMatrix();
     glTranslatef(-3.5,9,0);
     circle(3.5);
     glPopMatrix();
 
-    //top right
+    ///top right
 
     glPushMatrix();
     glTranslatef(1,9,0);
     circle(3);
     glPopMatrix();
 
-    //middle
+    ///middle
 
     glPushMatrix();
     glTranslatef(-1.5,5.5,0);
@@ -122,7 +121,8 @@ void a()                                        //mini Cloud
 }
 
 
-void c()                                        //One Single Cloud
+///......One Single Cloud....///
+void c()
 {
     glPushMatrix();
     glColor3f (1,1,1);
@@ -144,7 +144,8 @@ void c()                                        //One Single Cloud
     glPopMatrix();
 }
 
-void cloud()                                     // Three Cloud
+   ///...... Three Cloud...///
+void cloud()
 {
     glPushMatrix();
     glTranslatef(-15.0,30.0,0.0);
@@ -168,18 +169,29 @@ void rect()
 {
     glRectf(-16.0, -16.0, 16.0, 16.0);
 }
+
 GLfloat ss=0.0;
+
+  ///-------------------------------------------------- sky-------------------------------------///
+
 void day()
 {
-    glBegin(GL_POLYGON);                        // blue sky
+    glBegin(GL_POLYGON);
     glColor3f(sr,sg,sb);
     glVertex3f(-50,-3,0.0);
+
+    glColor3f(0.478, 0.921, 0.980);///shade
     glVertex3f(-50,50,0.0);
+
+    glColor3f(0.137, 0.474, 0.686);///shade
     glVertex3f(80,50,0.0);
+
     glVertex3f(80,-3,0.0);
     glEnd();
 
-    glPushMatrix();                             //sun
+
+    ///-------------------------------------sun------------------------///
+    glPushMatrix();
     glTranslatef(ss,0.0,0.0);
     glTranslatef(-20.0,40.0,0.0);
     glScalef(1.0,1.5,0.0);
@@ -187,6 +199,8 @@ void day()
     circle(3);
     glPopMatrix();
 }
+
+///---------------------------------------------Ground-------------------///
 void ground()
 {
 
@@ -195,14 +209,18 @@ void ground()
     glTranslatef(-70,-42,0);
     glBegin(GL_POLYGON);
 
+
     glVertex3f (-10, 0, 0.0);
+    //glColor3f(0.478, 0.980, 0.490);
     glVertex3f (-10,10, 0.0);
     glVertex3f (600,10, 0.0);
     glVertex3f (600,0, 0.0);
 
     glEnd();
 }
-void night ()                                    //black sky
+
+///--------------Night black sky-------------///
+void night ()
 {
     glBegin(GL_POLYGON);
     glColor3f(0.0,0.0,0.0);
@@ -213,7 +231,9 @@ void night ()                                    //black sky
 
     glEnd();
 }
-void moon()                                     //moon
+
+///------------------------moon------------------------///
+void moon()
 {
     glPushMatrix();
 
@@ -228,6 +248,7 @@ void moon()                                     //moon
 
     glutPostRedisplay();
 }
+
 void triangle(void)
 {
     glColor3f (0.137255,0.556863,0.137255);
@@ -239,6 +260,7 @@ void triangle(void)
 
     glEnd();
 }
+
 
 void grass()
 {
@@ -252,7 +274,8 @@ void grass()
 
 }
 
-void tree()                             //green leaves
+///---------------Tree green leaves---------------------///
+void tree()
 {
     glPushMatrix();
     glTranslatef(35,10,0);
@@ -268,7 +291,9 @@ void tree()                             //green leaves
     glPopMatrix();
 }
 
-void treebody()                         //tree body
+
+///---------------Tree body---------------------///
+void treebody()
 {
     glBegin(GL_POLYGON);
     glColor3f (0.502, 0.000, 0.000);
@@ -334,13 +359,12 @@ void treebody()                         //tree body
 }
 
 
-//////////////////////
-///***HOME Start***////
-//////////////////////
+
+///---------------------------------------------HOME-----------------------------------------////
+
 void home1()
 {
-    //1st Home
-    //1
+
     glColor3ub(102,51,0);
     glBegin(GL_POLYGON);
     glVertex2d(3,14);
@@ -389,22 +413,33 @@ void house()
 {
     glColor3ub(240,150,100);
     glBegin(GL_POLYGON);
+
+
     glVertex2d(33,23);
+
+
     glVertex2d(44,23);
+
+
     glVertex2d(44,30);
     glVertex2d(33,30);
     glEnd();
 
     glColor3ub(0,105,105);
     glBegin(GL_POLYGON);
+
+glColor3ub(24, 150, 185);///shade
     glVertex2d(31,30);
+    glColor3ub(42, 100, 116);///shade
     glVertex2d(46,30);
+        glColor3ub(52, 146, 173);///shade
+
     glVertex2d(38.5,38);
     glEnd();
 
 }
 
-//circle
+///circle
 
 void circle1(float radius_x, float radius_y)
 {
@@ -433,7 +468,7 @@ glPushMatrix();
     day();
     glPopMatrix();
 
-    ///ground///
+    ///-------------------ground------------------///
     glPushMatrix();
     glTranslatef(0.0,-35.0,0.0);
     glScalef(3.5,3.0,0.0);
@@ -458,7 +493,7 @@ glPushMatrix();
 
 
 
-//tree1
+///....................tree1............///
     glPushMatrix();
     glColor3f(0.133, 0.545, 0.133);
     glTranslatef(-49.0,9.5,0.0);
@@ -489,20 +524,27 @@ glPushMatrix();
 
 
 
-//home 2///
+///-------home 2------///
     glPushMatrix();
     glTranslatef(-65.0,-20.0,0.0);
     house();
     glPopMatrix();
 ///***///
-///home 1///
+
+
+
+///.................home 1.............///
     glPushMatrix();
     glTranslatef(-45.0,-10.0,0.0);
     home1();
     glPopMatrix();
 
 ///***///
-    ///tree2///
+
+
+
+    ///..............tree2.............///
+
     glPushMatrix();
     glColor3f(0.133, 0.545, 0.133);
     glTranslatef(-44.0,-1,0.0);
@@ -516,10 +558,12 @@ glPushMatrix();
     glPopMatrix();
 ///***///
 
+
+
 ///********home 4********///
     glPushMatrix();
     glTranslatef(-10.0,-10.0,0.0);
-    //home1();
+
     glPopMatrix();
     glPopMatrix();
 ///***///
@@ -533,75 +577,74 @@ glPushMatrix();
     glColor3f(0.133, 0.545, 0.133);
     glTranslatef(22.0,-32.5,0.0);
     glScalef(0.4,0.5,0.0);
-    //tree();
+
     glPopMatrix();
     glPopMatrix();
     glPushMatrix();
     glTranslatef(30.5,-26.5,0.0);
     glScalef(0.4,0.5,0.0);
-    //treebody();
+
     glPopMatrix();
     ///***///
 
- glPushMatrix();
-
-
-    glTranslatef(27.5,18.0,0);
+     glPushMatrix();
+     glTranslatef(27.5,18.0,0);
     glRotatef(spin,0,0,1);
     glColor3f(1.0f, 0.0f, 0.0f);
+    glPopMatrix();
 
 
-glPopMatrix();
 
     padx = 27.5, pady = 18.0;
-
    float nayeemx=(27.5) * cos(spin/57.29) - (18.0)*sin(spin/57.29);
-    float nayeemy=(27.5) * sin(spin/57.29) + (18.0)*cos(spin/57.29);
+   float nayeemy=(27.5) * sin(spin/57.29) + (18.0)*cos(spin/57.29);
 
 
 
     glPushMatrix();
     glTranslatef(nayeemx,nayeemy,0);
+     glPopMatrix();
 
 
- glPopMatrix();
-
-
-////////////////////////////pond
+///--------------------------------------------RIVER-----------------------///
 
    glColor3f(0.231, 0.568, 0.945);
     glBegin(GL_POLYGON);
-
-
+        glColor3f(0.145, 0.533, 0.894);///shader
         glVertex2f(-50.0, -12.0);
+
+        glColor3f(0.317, 0.850, 0.941);///shader
         glVertex2f(50.0, -2.0);
 
+         glColor3f(0.317, 0.670, 0.941);///shader
          glVertex2f(50.0, -49.0);
 
+        glColor3f(0.145, 0.431, 0.894);///shader
         glVertex2f(-50.0, -50.0);
+
+         glColor3f(0.145, 0.670, 0.894);///shader
          glVertex2f(50.0,-50.0);
 
 
     glEnd();
 
-    ////leaf/////
+    ///--------------------------------------------leaf-----------------------------------/////
      glColor3f(0.231, 0.784, 0.015);
     glBegin(GL_POLYGON);
-        glVertex2f(-10.0, -20.0);
-      //  glVertex2f(-30.0, -33.0);
-
+    glVertex2f(-10.0, -20.0);
+      glColor3f(0.639, 0.937, 0.301);///shader
         glVertex2f(-45.0, -35.0);
         glVertex2f(-20.0,-42.0);
-
-         glVertex2f(0.0, -44.0);
+glVertex2f(0.0, -44.0);
+glColor3f(0.160, 0.545, 0.137);///shader
         glVertex2f(35.0, -40.0);
+glColor3f(0.160, 0.545, 0.137);///shader
         glVertex2f(40.0, -30.0);
         glVertex2f(30.0,-20.0);
+glEnd();
 
-    glEnd();
 
-
-//////////////leafmiddle
+///..............leaf middle vein...................///
 
 glColor3f(0.086, 0.435, 0.066);
     glBegin(GL_POLYGON);
@@ -616,7 +659,7 @@ glColor3f(0.086, 0.435, 0.066);
   glEnd();
 
 
-///leafshakha////////////////////////////////////
+///..............................leaf side vein..........///
   glColor3f(0.078, 0.450, 0.047);
   glLineWidth(2.0);
   glBegin(GL_LINES);
@@ -641,13 +684,13 @@ glColor3f(0.086, 0.435, 0.066);
     glVertex2f(30.0, -30.5);
 
    glEnd();
-   /////////////////////////////////////////////////////////////////////////
 
 
-   /////////////////////////Grasshopper//////////////////////
+
+   ///--------------------------------------------------Grasshopper-----------------------------///
 
 
-   ///head
+   ///......head........///
 glColor3f(0.431, 0.898, 0.164);
     glBegin(GL_POLYGON);
 glVertex2f(-8.0, -17.0);
@@ -657,7 +700,8 @@ glVertex2f(-8.0, -22.0);
         glVertex2f(-6.0, -22.0);
 glEnd();
 
-///antena
+
+///................antena................///
 
 glColor3f(0.0, 0.0, 0.0);
 glLineWidth(2);
@@ -670,16 +714,17 @@ glVertex2f(-7.0, -17.0);
         glVertex2f(-6.0, -22.0);
 glEnd();
 
-///eye
+
+///................eye.............///
 glColor3f(0.0, 0.0, 0.0);
 glPointSize(10.0);
 glBegin(GL_POINTS);
 glVertex2f(-7.0,-18.5);
 glEnd();
 
-///upperbody
+///.............upperbody...........///
 
-glColor3f(0.145, 0.733, 0.305);
+glColor3f(0.360, 0.525, 0.176);
 
     glBegin(GL_POLYGON);
 glVertex2f(0.0, -16.5);
@@ -690,20 +735,19 @@ glVertex2f(-4.0, -22.0);
 glVertex2f(-2.0, -22.0);
 glEnd();
 
-///upperLegs
+///.......................upperLegs...............///
 
 glColor3f(0.094, 0.364, 0.125);
 glLineWidth(4);
     glBegin(GL_LINES);
 glVertex2f(-1.0, -20.0);
-         //glVertex2f(-3.0, -22.0);
 
-         //glVertex2f(-6.0, -26.0);
 glVertex2f(-2.0, -28.0);
-       // glVertex2f(-1.0, -31.0);
-      //  glVertex2f(3.0, -28.0);
+
 glEnd();
 
+
+///..........///
 
 glColor3f(0.094, 0.364, 0.125);
 glLineWidth(4);
@@ -717,6 +761,8 @@ glLineWidth(4);
       //  glVertex2f(3.0, -28.0);
 glEnd();
 
+///.........///
+
 glColor3f(0.094, 0.364, 0.125);
 glLineWidth(4);
     glBegin(GL_LINES);
@@ -727,6 +773,7 @@ glLineWidth(4);
         glVertex2f(-1.0, -31.0);
 
 glEnd();
+///............///
 
 glColor3f(0.094, 0.364, 0.125);
 glLineWidth(4);
@@ -739,7 +786,7 @@ glEnd();
 
 
 
-///mainleg1/////
+///..................mainleg1........../////
 
 glColor3f(0.058, 0.4, 0.082);
 glLineWidth(12);
@@ -749,8 +796,9 @@ glVertex2f(6.0, -15.0);
 
     glVertex2f(10.0, -11.0);
 glEnd();
+///.........///
 
-glColor3f(0.101, 0.576, 0.133);
+glColor3f(0.125, 0.513, 0.160);
 glLineWidth(8);
     glBegin(GL_LINES);
 
@@ -761,7 +809,7 @@ glEnd();
 
 
 
-///mainbody_lower
+///......................mainbody_lower..............///
 glColor3f(0.435, 0.941, 0.039);
 
     glBegin(GL_POLYGON);
@@ -780,7 +828,7 @@ glVertex2f(0.0, -23.0);
 
 glEnd();
 
-///mainbody_upper
+///..........mainbody_upper (wing..........///
 
 glColor3f(0.145, 0.596, 0.168);
 
@@ -795,7 +843,7 @@ glVertex2f(0.0, -15.0);
     glVertex2f(24.0, -21.0);
 glEnd();
 
-///mainbody_tail
+///...............mainbody_tail................///
 
 glColor3f(0.435, 0.941, 0.039);
 
@@ -812,7 +860,7 @@ glVertex2f(30.0, -11.0);
     glVertex2f(30.0, -23.0);
 glEnd();
 
-///mainbody_leg2
+///...............mainbody_leg2.....................///
 
 glColor3f(0.058, 0.4, 0.082);
 glLineWidth(12);
@@ -823,7 +871,7 @@ glVertex2f(10.0, -18.0);
     glVertex2f(16.0, -12.0);
 glEnd();
 
-glColor3f(0.101, 0.576, 0.133);
+glColor3f(0.125, 0.513, 0.160);
 glLineWidth(8);
     glBegin(GL_LINES);
 
@@ -853,8 +901,7 @@ void init(void)
 {
     glClearColor (0, 0.749, 1, 0);
     gluOrtho2D(-50,50,-50,50);
-    //gluOrtho2D(0,100, 0, 100);
-   // itime = time(NULL);
+
 }
 
 void spinDisplay()
@@ -949,12 +996,13 @@ void keyboard(unsigned char key, int x, int y)
 
 int main()
 {
-    printf(">><< Press N for nightmood>><< Press D for day mood >><<\n\n");
-    printf("Click Mouse Left/Right Button for cloud movement\n\n");
+    printf("***************For nightmoodPress N ****************************\n\n");
+    printf("***************For day mood Press D*****************************\n\n");
+    printf("*********Click Mouse Left/Right Button for cloud movement**********\n\n");
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize (1200, 900);
     glutInitWindowPosition (0, 0);
-    glutCreateWindow ("shahriar ");
+    glutCreateWindow ("Grasshopper On Leaf");
     init();
     glutDisplayFunc(display);
     glutMouseFunc(mouse);
