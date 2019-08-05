@@ -569,7 +569,7 @@ glPopMatrix();
 
 ////////////////////////////pond
 
-   glColor3f(0.058, 0.470, 0.780);
+   glColor3f(0.231, 0.568, 0.945);
     glBegin(GL_POLYGON);
 
 
@@ -585,7 +585,7 @@ glPopMatrix();
     glEnd();
 
     ////leaf/////
-     glColor3f(0.011, 0.878, 0);
+     glColor3f(0.231, 0.784, 0.015);
     glBegin(GL_POLYGON);
         glVertex2f(-10.0, -20.0);
       //  glVertex2f(-30.0, -33.0);
@@ -603,7 +603,7 @@ glPopMatrix();
 
 //////////////leafmiddle
 
-glColor3f(0.086, 0.270, 0.105);
+glColor3f(0.086, 0.435, 0.066);
     glBegin(GL_POLYGON);
 
 
@@ -617,7 +617,7 @@ glColor3f(0.086, 0.270, 0.105);
 
 
 ///leafshakha////////////////////////////////////
-  glColor3f(0.086, 0.270, 0.105);
+  glColor3f(0.078, 0.450, 0.047);
   glLineWidth(2.0);
   glBegin(GL_LINES);
     glVertex2f(-10.0, -20.0);
@@ -648,7 +648,7 @@ glColor3f(0.086, 0.270, 0.105);
 
 
    ///head
-glColor3f(1.0, 1.0, 0.0);
+glColor3f(0.431, 0.898, 0.164);
     glBegin(GL_POLYGON);
 glVertex2f(-8.0, -17.0);
          glVertex2f(-4.5, -17.0);
@@ -659,7 +659,7 @@ glEnd();
 
 ///antena
 
-glColor3f(1.0, 1.0, 0.0);
+glColor3f(0.0, 0.0, 0.0);
 glLineWidth(2);
     glBegin(GL_LINES);
 glVertex2f(-13.0, -8.0);
@@ -672,14 +672,14 @@ glEnd();
 
 ///eye
 glColor3f(0.0, 0.0, 0.0);
-glPointSize(7.0);
+glPointSize(10.0);
 glBegin(GL_POINTS);
 glVertex2f(-7.0,-18.5);
 glEnd();
 
 ///upperbody
 
-glColor3f(1.0, .37, 0.0);
+glColor3f(0.145, 0.733, 0.305);
 
     glBegin(GL_POLYGON);
 glVertex2f(0.0, -16.5);
@@ -692,8 +692,8 @@ glEnd();
 
 ///upperLegs
 
-glColor3f(1.0, 1.0, 0.0);
-glLineWidth(2);
+glColor3f(0.094, 0.364, 0.125);
+glLineWidth(4);
     glBegin(GL_LINES);
 glVertex2f(-1.0, -20.0);
          //glVertex2f(-3.0, -22.0);
@@ -705,8 +705,8 @@ glVertex2f(-2.0, -28.0);
 glEnd();
 
 
-glColor3f(1.0, 1.0, 0.0);
-glLineWidth(2);
+glColor3f(0.094, 0.364, 0.125);
+glLineWidth(4);
     glBegin(GL_LINES);
 
          glVertex2f(-3.0, -22.0);
@@ -717,8 +717,8 @@ glLineWidth(2);
       //  glVertex2f(3.0, -28.0);
 glEnd();
 
-glColor3f(1.0, 1.0, 0.0);
-glLineWidth(2);
+glColor3f(0.094, 0.364, 0.125);
+glLineWidth(4);
     glBegin(GL_LINES);
 
 
@@ -728,8 +728,8 @@ glLineWidth(2);
 
 glEnd();
 
-glColor3f(1.0, 1.0, 0.0);
-glLineWidth(2);
+glColor3f(0.094, 0.364, 0.125);
+glLineWidth(4);
     glBegin(GL_LINES);
 
 glVertex2f(-2.0, -28.0);
@@ -741,7 +741,7 @@ glEnd();
 
 ///mainleg1/////
 
-glColor3f(0.0, 0.0, 0.0);
+glColor3f(0.058, 0.4, 0.082);
 glLineWidth(12);
     glBegin(GL_LINES);
 
@@ -750,7 +750,7 @@ glVertex2f(6.0, -15.0);
     glVertex2f(10.0, -11.0);
 glEnd();
 
-glColor3f(0.0, 0.0, 0.0);
+glColor3f(0.101, 0.576, 0.133);
 glLineWidth(8);
     glBegin(GL_LINES);
 
@@ -762,7 +762,7 @@ glEnd();
 
 
 ///mainbody_lower
-glColor3f(1.0, .85, 0.23);
+glColor3f(0.435, 0.941, 0.039);
 
     glBegin(GL_POLYGON);
 
@@ -782,7 +782,7 @@ glEnd();
 
 ///mainbody_upper
 
-glColor3f(0.0, 1.0, 0.0);
+glColor3f(0.145, 0.596, 0.168);
 
     glBegin(GL_POLYGON);
 
@@ -797,7 +797,7 @@ glEnd();
 
 ///mainbody_tail
 
-glColor3f(.435, .681, .238);
+glColor3f(0.435, 0.941, 0.039);
 
     glBegin(GL_POLYGON);
 
@@ -814,7 +814,7 @@ glEnd();
 
 ///mainbody_leg2
 
-glColor3f(0.0, 0.0, 0.0);
+glColor3f(0.058, 0.4, 0.082);
 glLineWidth(12);
     glBegin(GL_LINES);
 
@@ -823,7 +823,7 @@ glVertex2f(10.0, -18.0);
     glVertex2f(16.0, -12.0);
 glEnd();
 
-glColor3f(0.0, 0.0, 0.0);
+glColor3f(0.101, 0.576, 0.133);
 glLineWidth(8);
     glBegin(GL_LINES);
 
@@ -832,6 +832,18 @@ glLineWidth(8);
     glVertex2f(23.0, -32.0);
 glEnd();
 
+
+///border
+/*glColor3f(0, 0, 0);
+glLineWidth(1);
+    glBegin(GL_LINES);
+glVertex2f(-8.0, -17.0);
+         glVertex2f(-4.5, -17.0);
+         glVertex2f(-5.0, -20.0);
+glVertex2f(-8.0, -22.0);
+        glVertex2f(-6.0, -22.0);
+glEnd();
+*/
 
 
    glFlush();
