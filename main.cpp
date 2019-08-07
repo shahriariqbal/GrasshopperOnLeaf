@@ -18,6 +18,7 @@ float padx = 27.5, pady = 18.0;
 static float	tx	=  0.0;
 static float	ty	=  0.0;
 bool ghurtese = false;
+float l=-17,m=-7,n=-2,o=-8;///l=-17 m=-7
 
 
 void circle(GLdouble rad)
@@ -701,17 +702,36 @@ glVertex2f(-8.0, -22.0);
 glEnd();
 
 
+
+
 ///................antena................///
 
 glColor3f(0.0, 0.0, 0.0);
 glLineWidth(2);
     glBegin(GL_LINES);
-glVertex2f(-13.0, -8.0);
-         glVertex2f(-7.0, -17.0);
+//glVertex2f(-13.0, -8.0);
+        // glVertex2f(l, m);
 
-         glVertex2f(-2.0, -8.0);
-glVertex2f(-7.0, -17.0);
-        glVertex2f(-6.0, -22.0);
+       // glVertex2f(n, o);
+        glVertex2f(l, m);///l=-17 m=-7
+
+         glVertex2f(-8, -17);
+
+//glVertex2f(-7.0, -17.0);
+        //glVertex2f(-6.0, -22.0);
+glEnd();
+
+    glBegin(GL_LINES);
+//glVertex2f(-13.0, -8.0);
+        // glVertex2f(l, m);
+
+       // glVertex2f(n, o);
+        glVertex2f(n, o);///n=-2 o=-8
+
+         glVertex2f(-8, -17);
+
+//glVertex2f(-7.0, -17.0);
+        //glVertex2f(-6.0, -22.0);
 glEnd();
 
 
@@ -789,7 +809,7 @@ glEnd();
 ///..................mainleg1........../////
 
 glColor3f(0.058, 0.4, 0.082);
-glLineWidth(12);
+glLineWidth(13);
     glBegin(GL_LINES);
 
 glVertex2f(6.0, -15.0);
@@ -851,13 +871,13 @@ glColor3f(0.435, 0.941, 0.039);
 
 glVertex2f(30.0, -11.0);
 
-    glVertex2f(30.0, -23.0);
+    //glVertex2f(30.0, -23.0);
 
     glVertex2f(24.0, -15.0);
 
     glVertex2f(24.0, -23.0);
     //glVertex2f(27.0, -23.0);
-    glVertex2f(30.0, -23.0);
+    glVertex2f(27.0, -23.0);
 glEnd();
 
 ///...............mainbody_leg2.....................///
@@ -881,17 +901,104 @@ glLineWidth(8);
 glEnd();
 
 
-///border
-/*glColor3f(0, 0, 0);
-glLineWidth(1);
+///--------------------------------------------------border------------------------------------------------------------------------///
+glColor3f(0.164, .674, .270);
+glLineWidth(3);
     glBegin(GL_LINES);
 glVertex2f(-8.0, -17.0);
          glVertex2f(-4.5, -17.0);
          glVertex2f(-5.0, -20.0);
+//glVertex2f(-8.0, -22.0);
+       // glVertex2f(-6.0, -22.0);
+glEnd();
+
+glLineWidth(2);
+glBegin(GL_LINES);
 glVertex2f(-8.0, -22.0);
         glVertex2f(-6.0, -22.0);
+
 glEnd();
+
+
+glLineWidth(2);
+glBegin(GL_LINES);
+glVertex2f(-8.0, -22.0);
+        glVertex2f(-8.0, -17.0);
+
+glEnd();
+
+//glLineWidth(2);
+//glBegin(GL_LINES);
+////glVertex2f(-8.0, -22.0);
+//       // glVertex2f(-6.0, -22.0);
+//
+//        //glVertex2f(-4.5, -17.0);
+//         glVertex2f(-5.0, -20.0);
+//         glVertex2f(-6.0, -22.0);
+//
+//glEnd();
+
+/*glLineWidth(2);
+glBegin(GL_LINES);
+//glVertex2f(-8.0, -22.0);
+       // glVertex2f(-6.0, -22.0);
+
+        //glVertex2f(-4.5, -17.0);
+         glVertex2f(-5.0, -20.0);
+         glVertex2f(-3.0, -22.0);
+
+glEnd();*/
+
+///.............upperbody.border..........///
+
+//glColor3f(0.360, 0.525, 0.176);
+
+    glBegin(GL_LINE_STRIP);
+glVertex2f(0.0, -16.5);
+        // glVertex2f(0.0, -22.0);
+
+         glVertex2f(-5.0, -16.5);
+glVertex2f(-4.0, -22.0);
+glVertex2f(-2.0, -22.0);
+glEnd();
+
+
+    glBegin(GL_LINE_STRIP);
+glVertex2f(0.0, -16.5);
+         glVertex2f(0.0, -22.0);
+
+         //glVertex2f(-5.0, -16.5);
+//glVertex2f(-4.0, -22.0);
+//glVertex2f(-2.0, -22.0);
+glEnd();
+
+/*
+///......................mainbody_lower border..............///
+glColor3f(0.164, .674, .270);
+glLineWidth(4);
+
+    glBegin(GL_LINES);
+
+glVertex2f(0.0, -23.0);
+
+    //glVertex2f(0.0, -17.0);
+
+    glVertex2f(24.0, -23.0);
+
+    //glVertex2f(24.0, -21.0);
+
+        //glVertex2f(15.0, -15.0);
+      //  glVertex2f(24.0, -15.0);
+          // glVertex2f(5.0, -15.0);
+
+glEnd();
+
 */
+
+
+
+
+
 
 
    glFlush();
@@ -968,6 +1075,36 @@ void keyDisplayAnimationNight()
     glutPostRedisplay();
 }
 
+void AnimationAntena(){
+
+    l = -25.0;
+    m=-12.0;
+    n=-10.0;
+    o=-8.0;
+
+    //p = 500.0;
+
+   // q = 0.0;
+    glutPostRedisplay();
+
+}
+
+void AnimationAntena2(){
+
+
+///l=-17,m=-7,n=-2,o=-8;
+    l = -17;
+    m=-7;
+    n=-2;
+    o=-8;
+
+    //p = 500.0;
+
+   // q = 0.0;
+    glutPostRedisplay();
+
+}
+
 
 
 
@@ -987,6 +1124,14 @@ void keyboard(unsigned char key, int x, int y)
         spinDisplay();
        break;
 
+    case 'a':
+        AnimationAntena();
+        break;
+
+    case 's':
+       AnimationAntena2();
+        break;
+
     default:
         break;
     }
@@ -999,10 +1144,11 @@ int main()
     printf("***************For nightmoodPress N ****************************\n\n");
     printf("***************For day mood Press D*****************************\n\n");
     printf("*********Click Mouse Left/Right Button for cloud movement**********\n\n");
+    printf("*********Click A/S Button for Antena movement**********\n\n");
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize (1200, 900);
     glutInitWindowPosition (0, 0);
-    glutCreateWindow ("Grasshopper On Leaf");
+    glutCreateWindow ("Grasshopper On Leaf ");
     init();
     glutDisplayFunc(display);
     glutMouseFunc(mouse);
